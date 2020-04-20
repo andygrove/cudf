@@ -251,6 +251,8 @@ std::unique_ptr<cudf::experimental::aggregation> map_jni_aggregation(jint op) {
       return cudf::experimental::make_any_aggregation();
     case 15: // ALL
       return cudf::experimental::make_all_aggregation();
+    case 16: // NTH_ELEMENT
+      return cudf::experimental::make_nth_aggregation();
     default:
       throw std::logic_error("Unsupported Aggregation Operation");
   }
